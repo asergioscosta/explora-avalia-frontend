@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta author=" Augusto Sérgio e Carlos Eduardo">
-    <title>Cadastrar Viajante</title>
+    <title>Visualizar Viajante</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
-    <!-- Web Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
@@ -62,100 +61,114 @@
     </header>
     <!-- ----- End Header ----- -->
 
-    <!-- Start Breadcrumbs -->
+    <!-- ----- Start Breadcrumbs ----- -->
     <div class="breadcrumbs overlay">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs-content">
-                        <h1 class="page-title">Cadastrar</h1>
+                        <h1 class="page-title">Visualizar</h1>
                         <p>
-                            Cadastre-se agora para compartilhar e descobrir as melhores dicas e experiências de viagem.
+                            Aqui você pode visualizar os detalhes dos viajantes cadastrados. Explore as informações e
+                            conheça mais sobre cada viajante.
                         </p>
+                    </div>
+                    <ul class="breadcrumb-nav">
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="incluir-viajante.html">Incluir</a></li>
+                        <li><a href="listar-viajante.html">Listar</a></li>
+                        <li>Editar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----- End Breadcrumbs ----- -->
+
+    <!-- Main Content Start -->
+    <div class="change-password section">
+        <div class="container">
+            <div class="alerts-inner">
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <div class="dashbord-sidebar">
+                            <ul>
+                                <li class="heading">Visualizar Viajante</li>
+                                <li><a href="incluir-viajante.html"><i class="lni lni-clipboard"></i>Cadastrar
+                                        Viajante</a></li>
+                                <li><a class="active" href="visualizar-viajante.html"><i class="lni lni-lock"></i>
+                                        Visualizar
+                                        Viajante</a></li>
+                                <li><a href="editar-viajante.html"><i class="lni lni-clipboard"></i>Editar
+                                        Viajante</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Main Content -->
+                    <div class="col-lg-8">
+                        <div class="password-content">
+                            <h3>Visualizar Viajante</h3>
+                            <p>
+                                Aqui você encontra informações detalhadas sobre os viajantes cadastrados.
+                            </p>
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>Nome</label>
+                                            <input class="form-control" type="text" name="title">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>Sobrenome</label>
+                                            <input class="form-control" type="text" name="Name">
+                                            <i class="bx bxs-low-vision"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group last">
+                                            <label>Data de Nascimento</label>
+                                            <div class="input-group date" id="datetimepicker">
+                                                <input type="text" class="form-control" placeholder="12/11/2020">
+                                                <span class="input-group-addon"></span>
+                                                <i class="bx bx-calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group last">
+                                            <label>E-mail</label>
+                                            <input class="form-control" type="email" name="email">
+                                            <i class="bx bxs-low-vision"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group last">
+                                            <label>Telefone</label>
+                                            <div class="input-group date" id="datetimepicker">
+                                                <input type="text" class="form-control" placeholder="(32) 99999-9999">
+                                                <span class="input-group-addon"></span>
+                                                <i class="bx bxs-low-vision"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-lg-2 button">
+                                                <a class="btn" href="listar-viajante.html">Voltar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Breadcrumbs -->
-
-    <!-- ----- Section ----- -->
-    <section class="job-post section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1 col-12">
-                    <div class="job-information">
-                        <h3 class="title">Inserir Viajante</h3>
-                        <form>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label>Nome</label>
-                                        <input class="form-control" type="text" name="title">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Sobrenome</label>
-                                        <input class="form-control" type="text" name="Name">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Data de Nascimento</label>
-                                        <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="12/11/2020">
-                                            <span class="input-group-addon"></span>
-                                            <i class="bx bx-calendar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input class="form-control" type="email" name="email">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Telefone</label>
-                                        <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="(32) 99999-9999">
-                                            <span class="input-group-addon"></span>
-                                            <i class="bx bx-calendar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Nível de Experiência</label>
-                                        <select class="select">
-                                            <option value="1">Iniciante</option>
-                                            <option value="2">Intermediário</option>
-                                            <option value="3">Avançado</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group checkboxs">
-                                    <input type="checkbox" class="checkboxs" id="chb2">
-                                    <p>
-                                        Ao clicar, você concorda com nossos Termos e Condições e Políticas de
-                                        Privacidade.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 button">
-                                <button class="btn">Cadastrar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ----- End Section ----- -->
+    <!-- Main Content end -->
 
     <!-- ----- Footer ----- -->
     <footer class="footer">
@@ -167,11 +180,12 @@
                             <div class="logo">
                                 <a href="index.html"><img src="assets/images/logo/logo.svg" alt="Logo"></a>
                             </div>
-                            <p>Start building your creative website with our awesome template Massive.</p>
+                            <p>Compartilhe suas experiências e inspire outros viajantes com seus relatos.</p>
                             <ul class="contact-address">
-                                <li><span>Endereço:</span> Rua Barão de Santa Helena 555 - Granbery, Juiz de Fora, Minas Gerais</li>
+                                <li><span>Endereço:</span> Rua Barão de Santa Helena 555 - Granbery, Juiz de Fora, Minas
+                                    Gerais</li>
                                 <li><span>Email:</span> viajante@exploravalia.com</li>
-                                <li><span>Call:</span> 555-555-1234</li>
+                                <li><span>Telefone:</span> (32) 9 9999-9999</li>
                             </ul>
                             <div class="footer-social">
                                 <ul>
@@ -182,44 +196,50 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- End Single Widget -->
                     </div>
                     <div class="col-lg-8 col-12">
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-12">
-                                <!-- Single Widget -->
                                 <div class="single-footer f-link">
-                                    <h3>Explora Avalia</h3>
+                                    <h3>Viajante</h3>
                                     <ul>
-                                        <li><a href="#">Viajantes</a></li>
-                                        <li><a href="#">Dicas</a></li>
+                                        <li><a href="incluir-viajante.html">Incluir</a></li>
+                                        <li><a href="listar-viajante.html">Listar</a></li>
+                                        <li><a href="editar-viajante.html">Editar</a></li>
                                     </ul>
                                 </div>
-                                <!-- End Single Widget -->
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="single-footer f-link">
+                                    <h3>Dicas</h3>
+                                    <ul>
+                                        <li><a href="#">Incluir</a></li>
+                                        <li><a href="#">Listar</a></li>
+                                        <li><a href="#">Editar</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-12">
-                                <!-- Single Widget -->
                                 <div class="single-footer newsletter">
-                                    <h3>Inscreva-se </h3>
+                                    <h3>Inscreva-se</h3>
                                     <p>Inscreva-se para receber as últimas notícias</p>
                                     <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
                                         <input name="EMAIL" placeholder="Digite seu e-mail" class="common-input"
                                             onfocus="this.placeholder = ''"
                                             onblur="this.placeholder = 'Digite seu e-mail'" required="" type="email">
                                         <div class="button">
-                                            <button class="btn">Inscrever agora <span class="dir-part"></span></button>
+                                            <button class="btn">Inscreva-se agora <span
+                                                    class="dir-part"></span></button>
                                         </div>
                                     </form>
                                 </div>
-                                <!-- End Single Widget -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/ End Footer Middle -->
-        <!-- Start Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="inner">
@@ -245,19 +265,13 @@
             </div>
         </div>
     </footer>
+    <!-- ----- End Footer ----- -->
 
-    <!-- ========================= scroll-top ========================= -->
-    <a href="#" class="scroll-top btn-hover" style="display: flex;">
+    <!-- ----- scroll-top ----- -->
+    <a href="#" class="scroll-top btn-hover" style="display: none;">
         <i class="lni lni-chevron-up"></i>
     </a>
-
-    <!-- ========================= JS here ========================= -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
+    <!-- ----- End scroll-top ----- -->
 
 </body>
 

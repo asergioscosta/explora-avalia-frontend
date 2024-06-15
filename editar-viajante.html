@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta author=" Augusto Sérgio e Carlos Eduardo">
-    <title>Listar Viajante</title>
+    <title>Editar Viajante</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <div id="loading-area" style="opacity: 0; display: none;"></div>
 
     <!-- ----- Header ----- -->
@@ -60,62 +61,118 @@
     </header>
     <!-- ----- End Header ----- -->
 
-
-    <!-- Start Breadcrumbs -->
+    <!-- ----- Start Breadcrumbs ----- -->
     <div class="breadcrumbs overlay">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs-content">
-                        <h1 class="page-title">Listar</h1>
-                        <p>Business plan draws on a wide range of knowledge from different business<br> disciplines.
-                            Business draws on a wide range of different business .</p>
+                        <h1 class="page-title">Editar</h1>
+                        <p>
+                            Aqui você pode atualizar suas informações pessoais e ajustar suas preferências conforme
+                            necessário. Certifique-se de revisar cuidadosamente todas as alterações antes de confirmar.
+                        </p>
                     </div>
                     <ul class="breadcrumb-nav">
                         <li><a href="index.html">Página Inicial</a></li>
                         <li><a href="incluir-viajante.html">Incluir</a></li>
-                        <li>Listar</li>
+                        <li><a href="listar-viajante.html">Listar</a></li>
+                        <li>Editar</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Breadcrumbs -->
+    <!-- ----- End Breadcrumbs ----- -->
 
-    <!-- Start Find Job Area -->
-    <section class="find-job job-list section">
+    <!-- Main Content Start -->
+    <div class="change-password section">
         <div class="container">
-            <div class="single-head">
+            <div class="alerts-inner">
                 <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <!-- Single Job -->
-                        <div class="single-job">
-                            <div class="job-image">
-                                <img src="assets/images/jobs/img1.png" alt="#">
-                            </div>
-                            <div class="job-content">
-                                <h4><a href="job-details.html">Software Engineer</a></h4>
-                                <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per
-                                    week. All leads are pre-scheduled. </p>
-                                <ul>
-                                    <li><i class="lni lni-website"></i><a href="#"> winbrans.com</a></li>
-                                    <li><i class="lni lni-dollar"></i> $20k - $25k</li>
-                                    <li><i class="lni lni-map-marker"></i> New York</li>
-                                </ul>
-                            </div>
-                            <div class="job-button">
-                                <ul>
-                                    <li><a href="job-details.html">Apply</a></li>
-                                    <li><span>full time</span></li>
-                                </ul>
-                            </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="dashbord-sidebar">
+                            <ul>
+                                <li class="heading">Gerenciar Viajante</li>
+                                <li><a href="incluir-viajante.html"><i class="lni lni-clipboard"></i>Cadastrar
+                                        Viajante</a></li>
+                                        <li><a href="visualizar-viajante.html"><i class="lni lni-lock"></i> Visualizar
+                                            Viajante</a></li>
+                                <li><a class="active" href="editar-viajante.html"><i class="lni lni-lock"></i> Editar
+                                        Viajante</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Main Content -->
+                    <div class="col-lg-8">
+                        <div class="password-content">
+                            <h3>Editar Viajante</h3>
+                            <p>
+                                Aqui você pode alterar suas informações pessoais e preferências. Mantenha seus dados
+                                sempre atualizados para uma melhor experiência.
+                            </p>
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>Nome</label>
+                                            <input class="form-control" type="text" name="title">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>Sobrenome</label>
+                                            <input class="form-control" type="text" name="Name">
+                                            <i class="bx bxs-low-vision"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group last">
+                                            <label>Data de Nascimento</label>
+                                            <div class="input-group date" id="datetimepicker">
+                                                <input type="text" class="form-control" placeholder="12/11/2020">
+                                                <span class="input-group-addon"></span>
+                                                <i class="bx bx-calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group last">
+                                            <label>E-mail</label>
+                                            <input class="form-control" type="email" name="email">
+                                            <i class="bx bxs-low-vision"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group last">
+                                            <label>Telefone</label>
+                                            <div class="input-group date" id="datetimepicker">
+                                                <input type="text" class="form-control" placeholder="(32) 99999-9999">
+                                                <span class="input-group-addon"></span>
+                                                <i class="bx bxs-low-vision"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-lg-2 button">
+                                                <a class="btn" href="listar-viajante.html">Voltar</a>
+                                            </div>
+                                            <div class="col-lg-1 button">
+                                                <button type="submit" class="btn">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- /End Find Job Area -->
+    </div>
+    <!-- Main Content end -->
 
     <!-- ----- Footer ----- -->
     <footer class="footer">

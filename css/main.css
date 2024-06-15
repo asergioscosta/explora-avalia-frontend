@@ -889,7 +889,7 @@ ol {
   position: relative;
   padding: 70px 0;
   padding-top: 150px;
-  background-image: url("../images/breadcrumb/breadcrumb-bg.jpg");
+  background-image: url("../imagens/viagem.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1195,7 +1195,6 @@ ol {
 
 .button .btn {
   display: inline-block;
-  text-transform: capitalize;
   font-size: 14px;
   font-weight: 500;
   padding: 15px 30px;
@@ -7684,7 +7683,6 @@ blockquote .shape {
   font-size: 19px;
   font-weight: 600;
   position: relative;
-  text-transform: capitalize;
   margin-bottom: 30px;
   font-weight: 500;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta author=" Augusto Sérgio e Carlos Eduardo">
-    <title>Listar Viajante</title>
+    <title>Cadastrar Viajante</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <div id="loading-area" style="opacity: 0; display: none;"></div>
 
     <!-- ----- Header ----- -->
@@ -60,21 +61,22 @@
     </header>
     <!-- ----- End Header ----- -->
 
-
     <!-- Start Breadcrumbs -->
     <div class="breadcrumbs overlay">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs-content">
-                        <h1 class="page-title">Listar</h1>
-                        <p>Business plan draws on a wide range of knowledge from different business<br> disciplines.
-                            Business draws on a wide range of different business .</p>
+                        <h1 class="page-title">Cadastrar</h1>
+                        <p>
+                            Cadastre-se agora para compartilhar e descobrir as melhores dicas e experiências de viagem.
+                        </p>
                     </div>
                     <ul class="breadcrumb-nav">
                         <li><a href="index.html">Página Inicial</a></li>
-                        <li><a href="incluir-viajante.html">Incluir</a></li>
-                        <li>Listar</li>
+                        <li><a href="listar-viajante.html">Listar</a></li>
+                        <li>Cadastrar</li>
+
                     </ul>
                 </div>
             </div>
@@ -82,40 +84,83 @@
     </div>
     <!-- End Breadcrumbs -->
 
-    <!-- Start Find Job Area -->
-    <section class="find-job job-list section">
+    <!-- ----- Section ----- -->
+    <section class="job-post section">
         <div class="container">
-            <div class="single-head">
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <!-- Single Job -->
-                        <div class="single-job">
-                            <div class="job-image">
-                                <img src="assets/images/jobs/img1.png" alt="#">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-12">
+                    <div class="job-information">
+                        <h3 class="title">Cadastrar Viajante</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Nome</label>
+                                        <input class="form-control" type="text" name="title">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Sobrenome</label>
+                                        <input class="form-control" type="text" name="Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Data de Nascimento</label>
+                                        <div class="input-group date" id="datetimepicker">
+                                            <input type="text" class="form-control" placeholder="12/11/2020">
+                                            <span class="input-group-addon"></span>
+                                            <i class="bx bx-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>E-mail</label>
+                                        <input class="form-control" type="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Telefone</label>
+                                        <div class="input-group date" id="datetimepicker">
+                                            <input type="text" class="form-control" placeholder="(32) 99999-9999">
+                                            <span class="input-group-addon"></span>
+                                            <i class="bx bx-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Nível de Experiência</label>
+                                        <select class="select">
+                                            <option value="1">Iniciante</option>
+                                            <option value="2">Intermediário</option>
+                                            <option value="3">Avançado</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="job-content">
-                                <h4><a href="job-details.html">Software Engineer</a></h4>
-                                <p>We are looking for Enrollment Advisors who are looking to take 30-35 appointments per
-                                    week. All leads are pre-scheduled. </p>
-                                <ul>
-                                    <li><i class="lni lni-website"></i><a href="#"> winbrans.com</a></li>
-                                    <li><i class="lni lni-dollar"></i> $20k - $25k</li>
-                                    <li><i class="lni lni-map-marker"></i> New York</li>
-                                </ul>
+                            <div class="col-12">
+                                <div class="form-group checkboxs">
+                                    <input type="checkbox" class="checkboxs" id="chb2">
+                                    <p>
+                                        Ao clicar, você concorda com nossos Termos e Condições e Políticas de
+                                        Privacidade.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="job-button">
-                                <ul>
-                                    <li><a href="job-details.html">Apply</a></li>
-                                    <li><span>full time</span></li>
-                                </ul>
+                            <div class="col-lg-12 button">
+                                <button type="submit" class="btn">Cadastrar</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- /End Find Job Area -->
+    <!-- ----- End Section ----- -->
 
     <!-- ----- Footer ----- -->
     <footer class="footer">
