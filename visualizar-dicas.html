@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta author=" Augusto Sérgio e Carlos Eduardo">
-    <title>Visualizar Viajante</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <title>Visualizar Dicas</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/logo.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
 
-    <!-- ----- CSS ----- -->
+    <!-- ----- Start CSS ----- -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <!-- ----- End CSS ----- -->
 </head>
 
 <body>
-
     <div id="loading-area" style="opacity: 0; display: none;"></div>
 
     <!-- ----- Header ----- -->
@@ -67,7 +66,8 @@
                     <div class="breadcrumbs-content">
                         <h1 class="page-title">Visualizar</h1>
                         <p>
-                            Aqui você pode visualizar dicas e recomendações compartilhadas por outros viajantes.
+                            Aqui você pode compartilhar suas experiências, dicas e recomendações para tornar a jornada
+                            de outros viajantes mais enriquecedora.
                         </p>
                     </div>
                     <ul class="breadcrumb-nav">
@@ -88,51 +88,48 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-12">
                     <div class="job-information">
-                        <h3 class="title">Visualizar Viajante</h3>
-
-                        <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
-                            <a class="close" onclick="esconderAlert()">×</a>
-                        </div>
-
-                        <form id="form-editar-viajante" action="listar-viajante.html">
+                        <h3 class="title">Visualizar Dicas</h3>
+                        <form>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label>Nome</label>
+                                        <label>Destino</label>
                                         <input class="form-control" type="text" name="title">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label>Sobrenome</label>
+                                        <label>Categorias</label>
+                                        <input class="form-control" type="text" name="Name">
+                                        <i class="bx bxs-low-vision"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Descrição</label>
                                         <input class="form-control" type="text" name="Name">
                                         <i class="bx bxs-low-vision"></i>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group last">
-                                        <label>Data de Nascimento</label>
-                                        <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="12/11/2020">
-                                            <span class="input-group-addon"></span>
-                                            <i class="bx bx-calendar"></i>
+                                        <label>Custo Médio por Dia</label>
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" name="custo_por_dia"
+                                                placeholder="R$">
+                                            <i class="bx bxs-low-vision"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group last">
-                                        <label>E-mail</label>
-                                        <input class="form-control" type="email" name="email">
-                                        <i class="bx bxs-low-vision"></i>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group last">
-                                        <label>Telefone</label>
-                                        <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="(32) 99999-9999">
-                                            <span class="input-group-addon"></span>
-                                            <i class="bx bxs-low-vision"></i>
+                                        <label>Avaliação</label>
+                                        <div class="star-rating">
+                                            <span class="star" data-value="1">&#9733;</span>
+                                            <span class="star" data-value="2">&#9733;</span>
+                                            <span class="star" data-value="3">&#9733;</span>
+                                            <span class="star" data-value="4">&#9733;</span>
+                                            <span class="star" data-value="5">&#9733;</span>
                                         </div>
                                     </div>
                                 </div>
@@ -141,15 +138,19 @@
                                         <div class="col-lg-2 button">
                                             <a class="btn" href="listar-viajante.html">Voltar</a>
                                         </div>
+                                        <div class="col-lg-1 button">
+                                            <button type="submit" class="btn">Salvar</button>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ----- End Section ----- -->
+    <!-- ----- End Sections ----- -->
 
     <!-- ----- Footer ----- -->
     <footer class="footer">
@@ -246,7 +247,7 @@
     </a>
     <!-- ----- End scroll-top ----- -->
 
-    <script src="js/visualizar-viajante.js"></script>
+    <script src="js/incluir-dicas.js"></script>
 
 </body>
 
