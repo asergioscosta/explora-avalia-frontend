@@ -89,25 +89,32 @@
                 <div class="col-lg-10 offset-lg-1 col-12">
                     <div class="job-information">
                         <h3 class="title">Cadastrar Viajante</h3>
-                        <form>
+
+                        <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
+                            <a class="close" onclick="esconderAlert()">×</a>
+                        </div>
+
+                        <form id="form-incluir-viajante">
+
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label>Nome</label>
-                                        <input class="form-control" type="text" name="title">
+                                        <label for="input-nome">Nome</label>
+                                        <input class="form-control" type="text" name="title" id="input-nome">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label>Sobrenome</label>
-                                        <input class="form-control" type="text" name="Name">
+                                        <label for="input-sobrenome">Sobrenome</label>
+                                        <input class="form-control" type="text" name="Name" id="input-sobrenome">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label>Data de Nascimento</label>
+                                        <label for="input-nascimento">Data de Nascimento</label>
                                         <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="12/11/2020">
+                                            <input type="text" class="form-control" placeholder="12/11/2020"
+                                                id="input-nascimento">
                                             <span class="input-group-addon"></span>
                                             <i class="bx bx-calendar"></i>
                                         </div>
@@ -115,29 +122,30 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label>E-mail</label>
-                                        <input class="form-control" type="email" name="email">
+                                        <label for="input-email">E-mail</label>
+                                        <input class="form-control" type="email" name="email" id="input-email">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label>Telefone</label>
+                                        <label for="input-telefone">Telefone</label>
                                         <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="(32) 99999-9999">
+                                            <input type="text" class="form-control" placeholder="(32) 99999-9999"
+                                                id="input-telefone">
                                             <span class="input-group-addon"></span>
                                             <i class="bx bx-calendar"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label>Nível de Experiência</label>
-                                        <select class="select">
-                                            <option value="1">Iniciante</option>
-                                            <option value="2">Intermediário</option>
-                                            <option value="3">Avançado</option>
-                                        </select>
-                                    </div>
+
+
+                                <div class="form-group">
+                                    <label for="input-nivelexperiencia">Nível de Experiência</label>
+                                    <select class="select" id="input-nivelexperiencia">
+                                        <option value="1">Iniciante</option>
+                                        <option value="2">Intermediário</option>
+                                        <option value="3">Avançado</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -254,6 +262,11 @@
         <i class="lni lni-chevron-up"></i>
     </a>
     <!-- ----- End scroll-top ----- -->
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="js/incluir-viajante.js"></script>
 
 </body>
 
