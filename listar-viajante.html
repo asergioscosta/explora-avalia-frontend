@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta author=" Augusto Sérgio e Carlos Eduardo">
     <title>Listar Viajante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
@@ -17,6 +18,9 @@
 </head>
 
 <body>
+
+    
+
     <div id="loading-area" style="opacity: 0; display: none;"></div>
 
     <!-- ----- Header ----- -->
@@ -66,6 +70,7 @@
                 <div class="col-12">
                     <div class="breadcrumbs-content">
                         <h1 class="page-title">Listar</h1>
+
                         <p>Business plan draws on a wide range of knowledge from different business<br> disciplines.
                             Business draws on a wide range of different business .</p>
                     </div>
@@ -79,6 +84,8 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
+
+
 
     <!-- Conteúdo principal -->
     <div class="container">
@@ -95,6 +102,7 @@
                     <th>E-mail</th>
                     <th>Telefone</th>
                     <th>Nível de Experiência</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody id="tbListarViajanteBody">
@@ -199,18 +207,12 @@
     <!-- ----- End scroll-top ----- -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="http://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
-    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/listar-viajante.js"></script>
+
+    
 
 </body>
 

@@ -14,7 +14,7 @@ $('#form-incluir-viajante').submit(function (event) {
         'email': $('#input-email').val(),
         'telefone': $('#input-telefone').val(),
         'dataNascimento': nascimento.toISOString(),
-        'nivelExperiencia': $('#input-nivelexperiencia').val()
+        'nivelExperiencia': $('#input-nivelExperiencia').val()
     };
 
     console.log(JSON.stringify(formData));
@@ -28,10 +28,10 @@ $('#form-incluir-viajante').submit(function (event) {
         url: 'http://localhost:8080/api/viajante',
         data: JSON.stringify(formData),
         dataType: 'json',
-        success: function(data) {
+        success: function (data) {
             location.href = 'listar-viajante.html';
         },
-        error: function(data) {
+        error: function (data) {
             $('#div-alert-message').prepend(data.responseText);
             $('#div-alert-message').fadeIn();
         }
