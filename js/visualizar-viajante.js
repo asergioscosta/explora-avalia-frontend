@@ -9,7 +9,7 @@ function GetURLParameter(sParam) {
     }
 }
 
-var id_aluno = GetURLParameter("id");
+var id_viajante = GetURLParameter("id");
 
 function esconderAlert() {
     $('#div-alert-message').html("<a class='close' onclick='esconderAlert()'>×</a>");
@@ -30,21 +30,20 @@ function formatDate(date) {
     return [year, month, day].join('-');
 }
 
-
 $(document).ready(function () {
     $.ajax({
-        url: 'http://localhost:8080/api/viajante' + id_viajante,
+        url: 'http://localhost:8080/api/viajante/' + id_viajante,
         type: 'GET',
         dataType: 'json',
         success: function (data) {
             $("#input-nome").val(data.nome);
             $("#input-sobrenome").val(data.sobrenome);
             $("#input-email").val(data.email);
-            $("#input-telefone").val(data.input-telefone);
-            $("#input-nascimento").val(formatDate(new Date(data.nascimento)));
-            $("#input-nivelexperiencia").val(data.nivelexperiencia);
-
+            $("#input-telefone").val(data.telefone);
+            $("#input-datanascimento").val(formatDate(new Date(data.nascimento)));
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            console.error("Erro ao obter os detalhes do viajante:", textStatus, errorThrown);
         }
-    })
-
+    });
 });

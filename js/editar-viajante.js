@@ -1,26 +1,23 @@
 function GetURLParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++)
-    {
+    for (var i = 0; i < sURLVariables.length; i++) {
         var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam)
-        {
+        if (sParameterName[0] == sParam) {
             return sParameterName[1];
         }
     }
 }
 
-var id_aluno = GetURLParameter("id");
+var id_viajante = GetURLParameter("id");
 
-//Processar formulário
+// Processar formulário
 $('#form-editar-viajante').submit(function (event) {
-
     event.preventDefault();
 
     nascimento = new Date($('#input-nascimento').val());
 
-    //Criar formData
+    // Criar formData
     var formData = {
         'nome': $('#input-nome').val(),
         'sobrenome': $('#input-sobrenome').val(),
@@ -49,9 +46,9 @@ $('#form-editar-viajante').submit(function (event) {
             $('#div-alert-message').fadeIn();
         }
     });
- });
+});
 
- function esconderAlert() {
+function esconderAlert() {
     $('#div-alert-message').html("<a class='close' onclick='esconderAlert()'>×</a>");
     $('#div-alert-message').hide();
 }
@@ -62,28 +59,28 @@ function formatDate(date) {
         day = '' + d.getUTCDate(),
         year = d.getUTCFullYear();
 
-    if (month.length < 2)
-        month = '0' + month;
-    if (day.length < 2)
-        day = '0' + day;
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
 
     return [year, month, day].join('-');
 }
 
-
 $(document).ready(function () {
     $.ajax({
-        url: 'http://localhost:8080/api/viajante' + id_viajante,
+        url: 'http://localhost:8080/api/viajante/' + id_viajante,
         type: 'GET',
         dataType: 'json',
         success: function (data) {
             $("#input-nome").val(data.nome);
             $("#input-sobrenome").val(data.sobrenome);
             $("#input-email").val(data.email);
-            $("#input-telefone").val(data.input-telefone);
-            $("#input-nascimento").val(formatDate(new Date(data.nascimento)));
-            $("#input-nivelexperiencia").val(data.nivelexperiencia);
+            $("#input-telefone").val(data.telefone);
+            $("#input-nascimento").val(formatDate(new Date(data.dataNascimento)));
+            $("#input-nivelExperiencia").val(data.nivelExperiencia);
+        },
+        error: function (data) {
+            $('#div-alert-message').prepend(data.responseText);
+            $('#div-alert-message').fadeIn();
         }
-    })
-
+    });
 });

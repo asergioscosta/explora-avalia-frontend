@@ -1,11 +1,15 @@
-//Processar formulário
 $('#form-incluir-viajante').submit(function (event) {
-
 
     event.preventDefault();
 
-    nascimento = new Date($('#input-nascimento').val());
+    var nascimentoVal = $('#input-nascimento').val();
+    if (!nascimentoVal) {
+        $('#div-alert-message').prepend('Data de nascimento é obrigatória.');
+        $('#div-alert-message').fadeIn();
+        return;
+    }
 
+    var nascimento = new Date(nascimentoVal + 'T00:00:00'); // Adicionando hora para evitar problemas de timezone
 
     //Criar formData
     var formData = {

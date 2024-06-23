@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta author=" Augusto Sérgio e Carlos Eduardo">
+    <meta author="Augusto Sérgio e Carlos Eduardo">
     <title>Visualizar Viajante</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
 
-    <!-- ----- CSS ----- -->
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -20,7 +22,7 @@
 
     <div id="loading-area" style="opacity: 0; display: none;"></div>
 
-    <!-- ----- Header ----- -->
+    <!-- Header -->
     <header class="header other-page">
         <div class="navbar-area sticky">
             <div class="container">
@@ -57,9 +59,9 @@
             </div>
         </div>
     </header>
-    <!-- ----- End Header ----- -->
+    <!-- End Header -->
 
-    <!-- ----- Start Breadcrumbs ----- -->
+    <!-- Breadcrumbs -->
     <div class="breadcrumbs overlay">
         <div class="container">
             <div class="row">
@@ -80,9 +82,9 @@
             </div>
         </div>
     </div>
-    <!-- ----- End Breadcrumbs ----- -->
+    <!-- End Breadcrumbs -->
 
-    <!-- ----- Section ----- -->
+    <!-- Section -->
     <section class="job-post section">
         <div class="container">
             <div class="row">
@@ -90,39 +92,39 @@
                     <div class="job-information">
                         <h3 class="title">Visualizar Viajante</h3>
 
-                        <div class="alert alert-danger collapse" role="alert" id="div-alert-message">
-                            <a class="close" onclick="esconderAlert()">×</a>
+                        <!-- Alerta -->
+                        <div class="alert alert-danger" role="alert" id="div-alert-message" style="display: none;">
+                            <a href="#" class="close" onclick="esconderAlert()" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </a>
+                            Este é um alerta de teste.
                         </div>
-
+                        
                         <form id="form-editar-viajante" action="listar-viajante.html">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Nome</label>
-                                        <input class="form-control" type="text" name="title" id="input-nome">
+                                        <input class="form-control" type="text" name="title" id="input-nome" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Sobrenome</label>
-                                        <input class="form-control" type="text" name="Name" id="input-sobrenome">
+                                        <input class="form-control" type="text" name="Name" id="input-sobrenome" readonly>
                                         <i class="bx bxs-low-vision"></i>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group last">
-                                        <label>Data de Nascimento</label>
-                                        <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="12/11/2020" id="input-datanascimento">
-                                            <span class="input-group-addon"></span>
-                                            <i class="bx bx-calendar"></i>
-                                        </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label for="input-nascimento">Data de Nascimento</label>
+                                        <input class="form-control" type="date" id="input-nascimento" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group last">
                                         <label>E-mail</label>
-                                        <input class="form-control" type="email" name="email" id="input-email">
+                                        <input class="form-control" type="email" name="email" id="input-email" readonly>
                                         <i class="bx bxs-low-vision"></i>
                                     </div>
                                 </div>
@@ -130,7 +132,8 @@
                                     <div class="form-group last">
                                         <label>Telefone</label>
                                         <div class="input-group date" id="datetimepicker">
-                                            <input type="text" class="form-control" placeholder="(32) 99999-9999" id="input-telefone">
+                                            <input type="text" class="form-control" placeholder="(32) 99999-9999"
+                                                id="input-telefone" readonly>
                                             <span class="input-group-addon"></span>
                                             <i class="bx bxs-low-vision"></i>
                                         </div>
@@ -138,6 +141,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="row">
+                                        <div class="col-lg-2 button" id="editarButton" style="display: none;">
+                                            <a class="btn" href="listar-viajante.html">Editar</a>
+                                        </div>
                                         <div class="col-lg-2 button">
                                             <a class="btn" href="listar-viajante.html">Voltar</a>
                                         </div>
@@ -149,9 +155,9 @@
             </div>
         </div>
     </section>
-    <!-- ----- End Section ----- -->
+    <!-- End Section -->
 
-    <!-- ----- Footer ----- -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-middle">
             <div class="container">
@@ -219,7 +225,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="left">
-                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
+                                <p>Designed and Developed by <a href="https://graygrids.com/" rel="nofollow"
                                         target="_blank">GrayGrids</a></p>
                             </div>
                         </div>
@@ -237,18 +243,19 @@
                 </div>
             </div>
         </div>
+        </div>
     </footer>
-    <!-- ----- End Footer ----- -->
+    <!-- End Footer -->
 
-    <!-- ----- scroll-top ----- -->
+    <!-- Scroll Top -->
     <a href="#" class="scroll-top btn-hover" style="display: none;">
         <i class="lni lni-chevron-up"></i>
     </a>
-    <!-- ----- End scroll-top ----- -->
+    <!-- End Scroll Top -->
 
+    <!-- Script -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <script src="js/visualizar-viajante.js"></script>
 
 </body>
