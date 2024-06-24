@@ -8194,11 +8194,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     -webkit-box-shadow: none;
     box-shadow: none; }
   .btn.btn-primary {
-    background: #96bb7c;
-    border-color: #96bb7c; }
+    background: #2042e3;
+    border-color: #2042e3; }
     .btn.btn-primary:hover {
-      border-color: #a1c289;
-      background: #a1c289; }
+      border-color: #2042e3;
+      background: #2042e3; }
   .btn.btn-outline-primary {
     border-color: #96bb7c;
     color: #96bb7c; }
