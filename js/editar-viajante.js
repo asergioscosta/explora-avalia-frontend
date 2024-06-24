@@ -15,7 +15,7 @@ var id_viajante = GetURLParameter("id");
 $('#form-editar-viajante').submit(function (event) {
     event.preventDefault();
 
-    nascimento = new Date($('#input-nascimento').val());
+    var nascimento = new Date($('#input-nascimento').val());
 
     // Criar formData
     var formData = {
@@ -35,7 +35,7 @@ $('#form-editar-viajante').submit(function (event) {
             'Content-Type': 'application/json',
         },
         type: 'PUT',
-        url: 'http://localhost:8080/api/viajante',
+        url: 'http://localhost:8080/api/viajante/' + id_viajante,
         data: JSON.stringify(formData),
         dataType: 'json',
         success: function (data) {
