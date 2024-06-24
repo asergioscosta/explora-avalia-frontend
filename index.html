@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author=" Augusto Sérgio e Carlos Eduardo">
+    <title>Editar Dicas</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- ----- Start CSS ----- -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- ----- End CSS ----- -->
+</head>
+
+<body>
+    <div id="loading-area" style="opacity: 0; display: none;"></div>
+
+    <!-- ----- Header ----- -->
+    <header class="header other-page">
+        <div class="navbar-area sticky">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand logo" href="index.html">
+                                <img class="logo1" src="imagens/logo-1.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a href="index.html">Página Inicial</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#">Viajante</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#">Dicas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button">
+                                <a href="javacript:" data-toggle="modal" data-target="#signup" class="btn">Sair</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ----- End Header ----- -->
+
+    <!-- ----- Start Breadcrumbs ----- -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Página Inicial</h1>
+                        <p>
+                            Aqui você pode incluir, listar e editar o viajante.
+                        </p>
+                    </div>
+                    <ul class="breadcrumb-nav">
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="incluir-viajante.html">Incluir</a></li>
+                        <li><a href="listar-viajante.html">Listar</a></li>
+                        <li>Editar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="untree_co-section" id="contact-section">
+        <div class="container">
+    
+          <div class="row">
+            <div class="col-md-12 mb-5" data-aos="fade-up" data-aos-delay="0">
+              <div class="section-heading text-center">
+                <h2>Contate-me</h2>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+    
+            <div class="col-lg-7">
+    
+    
+              <form class="contact-form" data-aos="fade-up" data-aos-delay="100" action="https://formspree.io/f/mjvqdnnr" method="post">
+                
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="" for="fname">Primeiro Nome</label>
+                      <input name="Nome" type="text" class="form-control" id="fname" required>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label class="" for="lname">Sobrenome</label>
+                      <input name="Sobrenome" type="text" class="form-control" id="lname">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="" for="email" name="email">Endereço de Email</label>
+                  <!-- <input name="email" type="email" class="form-control" id="email" > -->
+                  <input name="Email" class="form-control" id="email" type="email" required></input>
+                </div>
+    
+                <div class="form-group" >
+                  <label class="" for="message">Messagem</label>
+                  <textarea name="Messagem" class="form-control" id="message" cols="30" rows="5"></textarea>
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+              </form>
+
+
+    <script src="js/editar-dicas.js"></script>
+
+</body>
+
+</html>
