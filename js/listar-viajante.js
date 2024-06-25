@@ -15,7 +15,6 @@ function listarViajante() {
                 html += '<td>' + data.email + '</td>';
                 html += '<td>' + data.telefone + '</td>';
 
-                // Verifica se o nivelExperiencia está definido e dentro do intervalo esperado
                 if (data.nivelExperiencia !== undefined && data.nivelExperiencia >= 1 && data.nivelExperiencia <= 5) {
                     html += '<td>' + data.nivelExperiencia + '</td>';
                 } else {

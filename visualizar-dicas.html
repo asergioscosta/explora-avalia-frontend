@@ -89,25 +89,36 @@
                 <div class="col-lg-10 offset-lg-1 col-12">
                     <div class="job-information">
                         <h3 class="title">Visualizar Dicas</h3>
-                        <form>
+
+                        <!-- Alerta -->
+                        <div class="alert alert-danger" role="alert" id="div-alert-message" style="display: none;">
+                            <a href="#" class="close" onclick="esconderAlert()" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </a>
+                        </div>
+
+                        <form id="form-editar-viajante" action="listar-dicas.html">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Destino</label>
-                                        <input class="form-control" type="text" name="title">
+                                        <input class="form-control" type="text" name="title" id="input-destino"
+                                            readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Categorias</label>
-                                        <input class="form-control" type="text" name="Name">
+                                        <input class="form-control" type="text" name="Name" id="input-categorias"
+                                            readonly>
                                         <i class="bx bxs-low-vision"></i>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label>Descrição</label>
-                                        <input class="form-control" type="text" name="Name">
+                                        <input class="form-control" type="text" name="Name" id="input-descricao"
+                                            readonly>
                                         <i class="bx bxs-low-vision"></i>
                                     </div>
                                 </div>
@@ -116,27 +127,20 @@
                                         <label>Custo Médio por Dia</label>
                                         <div class="input-group">
                                             <input class="form-control" type="text" name="custo_por_dia"
-                                                placeholder="R$">
+                                                placeholder="R$" id="input-custo-por-dia" readonly>
                                             <i class="bx bxs-low-vision"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group last">
-                                        <label>Avaliação</label>
-                                        <div class="star-rating">
-                                            <span class="star" data-value="1">&#9733;</span>
-                                            <span class="star" data-value="2">&#9733;</span>
-                                            <span class="star" data-value="3">&#9733;</span>
-                                            <span class="star" data-value="4">&#9733;</span>
-                                            <span class="star" data-value="5">&#9733;</span>
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="input-avaliacao">Avaliação</label>
+                                    <input class="form-control" type="number" name="number" id="input-avaliacao" min="1"
+                                        max="5" required readonly>
                                 </div>
                                 <div class="row">
                                     <div class="row">
                                         <div class="col-lg-2 button">
-                                            <a class="btn" href="listar-viajante.html">Voltar</a>
+                                            <a class="btn" href="listar-dicas.html">Voltar</a>
                                         </div>
                                         <div class="col-lg-1 button">
                                             <button type="submit" class="btn">Salvar</button>
@@ -247,7 +251,11 @@
     </a>
     <!-- ----- End scroll-top ----- -->
 
-    <script src="js/incluir-dicas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/visualizar-dicas.js"></script>
 
 </body>
 

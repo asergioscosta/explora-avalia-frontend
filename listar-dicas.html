@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author=" Augusto Sérgio e Carlos Eduardo">
+    <title>Listar Dicas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="loading-area" style="opacity: 0; display: none;"></div>
+
+    <header class="header other-page">
+        <div class="navbar-area sticky">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand logo" href="index.html">
+                                <img class="logo1" src="imagens/logo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a href="index.html">Página Inicial</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#">Viajante</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#">Dicas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button">
+                                <a href="javacript:" data-toggle="modal" data-target="#signup" class="btn">Sair</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Listar</h1>
+                        <p>Business plan draws on a wide range of knowledge from different business<br> disciplines.
+                            Business draws on a wide range of different business .</p>
+                    </div>
+                    <ul class="breadcrumb-nav">
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="incluir-dicas.html">Incluir</a></li>
+                        <li>Listar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <hr>
+        <a class="btn btn-primary" href="incluir-dicas.html" role="button">Novo</a>
+        <table id="tbListarViajante" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Destino</th>
+                    <th>Categorias</th>
+                    <th>Descrição</th>
+                    <th>Custo Médio por Dia</th>
+                    <th>Avaliação</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbListarDicasBody">
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="f-about single-footer">
+                            <div class="logo">
+                                <a href="index.html"><img src="imagens/logo.png" alt="Logo"></a>
+                            </div>
+                            <p>Compartilhe suas experiências e inspire outros viajantes com seus relatos.</p>
+                            <ul class="contact-address">
+                                <li><span>Endereço:</span> Rua Barão de Santa Helena 555 - Granbery, Juiz de Fora, Minas
+                                    Gerais</li>
+                                <li><span>Email:</span> viajante@exploravalia.com</li>
+                                <li><span>Telefone:</span> (32) 9 9999-9999</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="single-footer f-link">
+                                    <h3>Viajante</h3>
+                                    <ul>
+                                        <li><a href="incluir-viajante.html">Incluir</a></li>
+                                        <li><a href="listar-viajante.html">Listar</a></li>
+                                        <li><a href="editar-viajante.html">Editar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="single-footer f-link">
+                                    <h3>Dicas</h3>
+                                    <ul>
+                                        <li><a href="#">Incluir</a></li>
+                                        <li><a href="#">Listar</a></li>
+                                        <li><a href="#">Editar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="single-footer newsletter">
+                                    <h3>Inscreva-se</h3>
+                                    <p>Inscreva-se para receber as últimas notícias</p>
+                                    <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                                        <input name="EMAIL" placeholder="Digite seu e-mail" class="common-input"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Digite seu e-mail'" required="" type="email">
+                                        <div class="button">
+                                            <button class="btn">Inscreva-se agora <span
+                                                    class="dir-part"></span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="left">
+                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
+                                        target="_blank">GrayGrids</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="right">
+                                <ul>
+                                    <li><a href="#">Termos de Uso</a></li>
+                                    <li><a href="#">Politicas de Privacidade</a></li>
+                                    <li><a href="#">Faq</a></li>
+                                    <li><a href="#">Contato</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top btn-hover" style="display: none;">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/listar-dicas.js"></script>
+</body>
+
+</html>

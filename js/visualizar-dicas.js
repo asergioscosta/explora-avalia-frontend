@@ -9,12 +9,7 @@ function GetURLParameter(sParam) {
     }
 }
 
-var id_viajante = GetURLParameter("id");
-
-function esconderAlert() {
-    $('#div-alert-message').html("<a class='close' onclick='esconderAlert()'>×</a>");
-    $('#div-alert-message').hide();
-}
+var id_dicas = GetURLParameter("id");
 
 function formatDate(date) {
     var d = new Date(date),
@@ -36,14 +31,16 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (data) {
-            $("#input-nome").val(data.nome);
-            $("#input-sobrenome").val(data.sobrenome);
-            $("#input-email").val(data.email);
-            $("#input-telefone").val(data.telefone);
-            $("#input-datanascimento").val(formatDate(new Date(data.nascimento)));
+            $("#input-destino").val(data.destino);
+            $("#input-categorias").val(data.categorias);
+            $("#input-descricao").val(data.descricao);
+            $("#input-custo-por-dia").val(data.custoMedioDia);
+            $("#input-avaliacao").val(data.avaliacao);
         },
-        error: function (xhr, textStatus, errorThrown) {
-            console.error("Erro ao obter os detalhes do viajante:", textStatus, errorThrown);
+        error: function (xhr, status, error) {
+            console.error('Erro ao carregar dica:', status, error);
+            $('#div-alert-message').prepend("Erro ao carregar dica. Por favor, tente novamente.");
+            $('#div-alert-message').fadeIn();
         }
     });
 });
