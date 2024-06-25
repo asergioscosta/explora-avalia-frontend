@@ -10,4 +10,13 @@ function onInit() {
             $("#div-total-viajantes").html(res);
         }
     });
+    $.ajax({
+        url: "http://localhost:8080/api/dicas/total",
+        type: "get",
+        dataType: "json",
+        success: function (res) {
+            $("#div-total-dicas").html(res);
+        }
+    });
 }
+
